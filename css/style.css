@@ -1,0 +1,230 @@
+.contact-form__first-name, .contact-form__last-name, .contact-form__email, .contact-form__password {
+  padding: 1em;
+  border: 1px solid #b9b6d3;
+  border-radius: 0.5em;
+  outline: none;
+}
+
+.contact-form__first-name::-webkit-input-placeholder, .contact-form__last-name::-webkit-input-placeholder, .contact-form__email::-webkit-input-placeholder, .contact-form__password::-webkit-input-placeholder {
+  font-weight: 600;
+  color: #3e3c49;
+}
+
+.contact-form__first-name:-ms-input-placeholder, .contact-form__last-name:-ms-input-placeholder, .contact-form__email:-ms-input-placeholder, .contact-form__password:-ms-input-placeholder {
+  font-weight: 600;
+  color: #3e3c49;
+}
+
+.contact-form__first-name::-ms-input-placeholder, .contact-form__last-name::-ms-input-placeholder, .contact-form__email::-ms-input-placeholder, .contact-form__password::-ms-input-placeholder {
+  font-weight: 600;
+  color: #3e3c49;
+}
+
+.contact-form__first-name::placeholder, .contact-form__last-name::placeholder, .contact-form__email::placeholder, .contact-form__password::placeholder {
+  font-weight: 600;
+  color: #3e3c49;
+}
+
+.contact-form__first-name:focus, .contact-form__last-name:focus, .contact-form__email:focus, .contact-form__password:focus {
+  border: 2px solid #3e3c49;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ff7a7a;
+  background-image: url("../images/bg-intro-mobile.png");
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.heading {
+  max-width: 325px;
+  margin: 0 2.5em;
+  color: #fff;
+}
+
+.heading__text1 {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
+.heading__text2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1.5em 0 3em;
+}
+
+.container {
+  max-width: 325px;
+  margin: 0 2.5em;
+}
+
+.trial-info {
+  color: #fff;
+  background-color: #6055a5;
+  margin-bottom: 3em;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(7, 7, 7, 0.2);
+          box-shadow: 0px 8px 0px 0px rgba(7, 7, 7, 0.2);
+}
+
+.trial-info__text {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 1em 3em;
+}
+
+.trial-info__text span {
+  font-weight: 700;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  color: #3e3c49;
+  background-color: #fff;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(7, 7, 7, 0.2);
+          box-shadow: 0px 8px 0px 0px rgba(7, 7, 7, 0.2);
+}
+
+.contact-form__first-name--error, .contact-form__last-name--error, .contact-form__email--error, .contact-form__password--error {
+  display: none;
+  font-weight: 600;
+  font-style: italic;
+  text-align: right;
+  color: #ff7a7a;
+}
+
+.contact-form__submit {
+  font-weight: 600;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1em;
+  color: #fff;
+  background-color: #38cc8c;
+  border: none;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 4px 0px 0px #2dba3e;
+          box-shadow: 0px 4px 0px 0px #2dba3e;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+
+.contact-form__submit:hover {
+  opacity: 0.6;
+}
+
+.contact-form__terms-text {
+  font-size: 1.1em;
+  margin: 1em 2em 0;
+  color: #b9b6d3;
+}
+
+.contact-form__terms-text span {
+  font-weight: 700;
+  color: #ff7a7a;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 1440px;
+  }
+  .heading {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 540px;
+    margin: auto 2.5em;
+    text-align: left;
+  }
+  .heading__text1 {
+    font-size: 3.5rem;
+  }
+  .container {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 540px;
+  }
+  .contact-form {
+    gap: 1.5em;
+    padding: 4em;
+  }
+  .contact-form__first-name, .contact-form__last-name, .contact-form__email, .contact-form__password {
+    padding: 1.5em;
+  }
+  .contact-form__first-name::-webkit-input-placeholder, .contact-form__last-name::-webkit-input-placeholder, .contact-form__email::-webkit-input-placeholder, .contact-form__password::-webkit-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact-form__first-name:-ms-input-placeholder, .contact-form__last-name:-ms-input-placeholder, .contact-form__email:-ms-input-placeholder, .contact-form__password:-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact-form__first-name::-ms-input-placeholder, .contact-form__last-name::-ms-input-placeholder, .contact-form__email::-ms-input-placeholder, .contact-form__password::-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .contact-form__first-name::placeholder, .contact-form__last-name::placeholder, .contact-form__email::placeholder, .contact-form__password::placeholder {
+    font-size: 0.9rem;
+  }
+  .contact-form__submit {
+    font-size: 1.5em;
+    letter-spacing: 0.07em;
+  }
+  .contact-form__terms-text {
+    font-size: 1.2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

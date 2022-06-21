@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Frontend Mentor Intro Component With Sign-up Form</title>
+	<link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+	<main>
+		<div class="heading">
+			<h1 class="heading__text1">Learn to code by watching others</h1>
+			<h2 class="heading__text2">See how experienced developers solve problems in real-time. Watching scripted
+				tutorials is great, but understanding how developers think is invaluable.</h2>
+		</div>
+		<div class="container">
+			<div class="trial-info">
+				<p class="trial-info__text"><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+			</div>
+			<form class="contact-form" action="" method="post">
+				<input type="text" placeholder="First Name" class="contact-form__first-name">
+				<p class="contact-form__first-name--error">First Name cannot be empty</p>
+				<input type="text" placeholder="Last Name" class="contact-form__last-name">
+				<p class="contact-form__last-name--error">Last Name cannot be empty</p>
+				<input type="email" name="email" placeholder="Email Address" class="contact-form__email">
+				<p class="contact-form__email--error">Looks like this is not an email</p>
+				<input type="password" name="password" placeholder="Password" class="contact-form__password">
+				<p class="contact-form__password--error">Password cannot be empty</p>
+				<button type="submit" class="contact-form__submit">Claim your free trial</button>
+				<p class="contact-form__terms-text">By clicking the button, you are agreeing to our <span>Terms and
+						Services</span>
+				</p>
+			</form>
+		</div>
+	</main>
+	<footer>
+		<p>Challenge by <a href="https://www.frontendmentor.io" target="_blank" rel="noopener">Frontend Mentor</a>.
+			Coded by <a href="https://github.com/Pawel-Gnat" target="_blank" rel="noopener">Paweł Gnat</a>.</p>
+	</footer>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>
