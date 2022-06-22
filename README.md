@@ -46,6 +46,8 @@ Below is my thinking process of Java Script code:
 
 I did this challenge in 7 hours. JavaScript took me 3,5 hours of coding. I improved my JS skills a little, but I'm sure there is a way to code it better. Maybe using some kind of loops? I tried to use .forEach to write less code, but it was too hard for me at this moment. My filter for email input could also be better, I see there are some kind of emails that pass that validations but shouldn't.
 
+I used BEM methodoloy and SCSS for the first time here on Frontend Mentor. 
+
 ## Author
 
 - Frontend Mentor - [@Pawel-Gnat](https://www.frontendmentor.io/profile/Pawel-Gnat)
