@@ -7,9 +7,11 @@ $grayish_blue: hsl(246, 25%, 77%);
 
 // extend
 %form-area {
+	font-weight: 600;
 	padding: 1em;
 	border: 1px solid $grayish_blue;
 	border-radius: 0.5em;
+	color: $dark_blue;
 	outline: none;
 
 	&::placeholder {
@@ -91,31 +93,42 @@ main {
 .contact-form {
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
 	padding: 2em;
 	color: $dark_blue;
 	background-color: #fff;
 	border-radius: 1em;
 	box-shadow: 0px 8px 0px 0px rgba(7, 7, 7, 0.2);
 
+	.input-active {
+		color: $red;
+		border: 2px solid $red;
+		background-image: url('../images/icon-error.svg');
+		background-size: 20px;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		background-position-x: right 10px;
+	}
+
 	&__first-name,
 	&__last-name,
 	&__email,
 	&__password {
 		@extend %form-area;
-		// margin-bottom: 1.5em;
-		&--error {
-			//    visibility: hidden;
-			display: none;
-			// opacity: 0;
-			font-weight: 600;
-			font-style: italic;
-			text-align: right;
-			// margin-bottom: 1.5em;
-			color: $red;
-		}
 	}
-	/// REMEMBER, YOU HAVE STOPPED HERE
+
+	&__error {
+		opacity: 0;
+		font-weight: 600;
+		font-style: italic;
+		text-align: right;
+		color: $red;
+	}
+
+	.p-active {
+		opacity: 1;
+		margin-bottom: 1em;
+	}
+
 	&__submit {
 		font-weight: 600;
 		font-size: 1.4em;
@@ -138,7 +151,6 @@ main {
 	&__terms-text {
 		font-size: 1.1em;
 		margin: 1em 2em 0;
-		///// REMEMBER TO CORRECT THAT MARGIN LATER
 		color: $grayish_blue;
 
 		span {
@@ -180,14 +192,20 @@ footer {
 	}
 
 	.contact-form {
-		gap: 1.5em;
+		gap: 0.2em;
 		padding: 4em;
+
+		.input-active {
+			background-size: 25px;
+			background-position-x: right 20px;
+		}
 
 		&__first-name,
 		&__last-name,
 		&__email,
 		&__password {
 			padding: 1.5em;
+			font-size: 0.9rem;
 
 			&::placeholder {
 				font-size: 0.9rem;

@@ -1,7 +1,9 @@
 .contact-form__first-name, .contact-form__last-name, .contact-form__email, .contact-form__password {
+  font-weight: 600;
   padding: 1em;
   border: 1px solid #b9b6d3;
   border-radius: 0.5em;
+  color: #3e3c49;
   outline: none;
 }
 
@@ -118,7 +120,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1em;
   padding: 2em;
   color: #3e3c49;
   background-color: #fff;
@@ -127,12 +128,27 @@ main {
           box-shadow: 0px 8px 0px 0px rgba(7, 7, 7, 0.2);
 }
 
-.contact-form__first-name--error, .contact-form__last-name--error, .contact-form__email--error, .contact-form__password--error {
-  display: none;
+.contact-form .input-active {
+  color: #ff7a7a;
+  border: 2px solid #ff7a7a;
+  background-image: url("../images/icon-error.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: right 10px;
+}
+
+.contact-form__error {
+  opacity: 0;
   font-weight: 600;
   font-style: italic;
   text-align: right;
   color: #ff7a7a;
+}
+
+.contact-form .p-active {
+  opacity: 1;
+  margin-bottom: 1em;
 }
 
 .contact-form__submit {
@@ -201,11 +217,16 @@ footer {
     max-width: 540px;
   }
   .contact-form {
-    gap: 1.5em;
+    gap: 0.2em;
     padding: 4em;
+  }
+  .contact-form .input-active {
+    background-size: 25px;
+    background-position-x: right 20px;
   }
   .contact-form__first-name, .contact-form__last-name, .contact-form__email, .contact-form__password {
     padding: 1.5em;
+    font-size: 0.9rem;
   }
   .contact-form__first-name::-webkit-input-placeholder, .contact-form__last-name::-webkit-input-placeholder, .contact-form__email::-webkit-input-placeholder, .contact-form__password::-webkit-input-placeholder {
     font-size: 0.9rem;

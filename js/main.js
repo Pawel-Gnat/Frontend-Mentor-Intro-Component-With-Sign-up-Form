@@ -1,56 +1,126 @@
-
-
-
-
-
-
-const sendBtn = document.querySelector('.button_form')
-const errorText = document.querySelector('.validation_info')
-const inputForm = document.querySelector('.email_input')
+const sendBtn = document.querySelector('.contact-form__submit')
+const firstName = document.querySelector('.contact-form__first-name')
+const lastName = document.querySelector('.contact-form__last-name')
+const emailAddress = document.querySelector('.contact-form__email')
+const password = document.querySelector('.contact-form__password')
 const filter =
 	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
-const showError = () => {
-	errorText.classList.add('validation_error')
-	inputForm.classList.add('input_error')
+const showFirstNameError = () => {
+	//function set input to error mode
+	const msgFirstName = firstName.nextElementSibling
+	msgFirstName.classList.add('p-active')
+	firstName.classList.add('input-active')
 }
 
-const clearError = () => {
+const clearFirstNameError = () => {
 	//function set input to default mode
-	errorText.classList.remove('validation_error')
-	inputForm.classList.remove('input_error')
+	const msgFirstName = firstName.nextElementSibling
+	msgFirstName.classList.remove('p-active')
+	firstName.classList.remove('input-active')
 }
 
-const validateEmail = () => {
-	// function checks if email is properly written, reffering to declared filter (regexp)
-
-	if (filter.test(inputForm.value)) {
-		clearError()
-	} else {
-		showError()
-	}
+const showLastNameError = () => {
+	//function set input to error mode
+	const msgLastName = lastName.nextElementSibling
+	msgLastName.classList.add('p-active')
+	lastName.classList.add('input-active')
 }
 
-const checkForm = () => {
+const clearLastNameError = () => {
+	//function set input to default mode
+	const msgLastName = lastName.nextElementSibling
+	msgLastName.classList.remove('p-active')
+	lastName.classList.remove('input-active')
+}
+
+const showEmailError = () => {
+	//function set input to error mode
+	const msgEmail = emailAddress.nextElementSibling
+	msgEmail.classList.add('p-active')
+	emailAddress.classList.add('input-active')
+}
+
+const clearEmailError = () => {
+	//function set input to default mode
+	const msgEmail = emailAddress.nextElementSibling
+	msgEmail.classList.remove('p-active')
+	emailAddress.classList.remove('input-active')
+}
+
+const showPasswordError = () => {
+	//function set input to error mode
+	const msgPassword = password.nextElementSibling
+	msgPassword.classList.add('p-active')
+	password.classList.add('input-active')
+}
+
+const clearPasswordError = () => {
+	//function set input to default mode
+	const msgPassword = password.nextElementSibling
+	msgPassword.classList.remove('p-active')
+	password.classList.remove('input-active')
+}
+
+const checkFirstNameError = () => {
 	// function checks if input is empty, if true than display error mode, else set input to default mode
-	if (inputForm.value === '') {
-		showError()
+	if (firstName.value === '') {
+		showFirstNameError()
 	} else {
-		clearError()
+		clearFirstNameError()
 	}
 }
 
-const clearInput = () => {
-	//function checks if input and parahraph dont contain error classes, if not it clears input and log text after submitting
-	if (!errorText.classList.contains('validation_error') && !inputForm.classList.contains('input_error')) {
-		console.log(inputForm.value)
-		inputForm.value = ''
+const checkLastNameError = () => {
+	// function checks if input is empty, if true than display error mode, else set input to default mode
+	if (lastName.value === '') {
+		showLastNameError()
+	} else {
+		clearLastNameError()
+	}
+}
+
+const checkEmailError = () => {
+	// function checks if input is empty, if true than display error mode, else set input to default mode
+	// function checks if email is properly written, reffering to declared filter (regexp)
+	if (emailAddress.value === '' || !filter.test(emailAddress.value)) {
+		showEmailError()
+	} else {
+		clearEmailError()
+	}
+}
+
+const checkPasswordError = () => {
+	// function checks if input is empty, if true than display error mode, else set input to default mode
+	if (password.value === '') {
+		showPasswordError()
+	} else {
+		clearPasswordError()
+	}
+}
+
+const clearInputs = () => {
+	//function checks if inputs dont contain error classes, if not, it clears input and log data after submitting
+
+	if (
+		!firstName.classList.contains('input-active') &&
+		!lastName.classList.contains('input-active') &&
+		!emailAddress.classList.contains('input-active') &&
+		!password.classList.contains('input-active')
+	) {
+		console.log(firstName.value, lastName.value, emailAddress.value, password.value)
+		firstName.value = ''
+		lastName.value = ''
+		emailAddress.value = ''
+		password.value = ''
 	}
 }
 
 sendBtn.addEventListener('click', e => {
 	e.preventDefault()
-	checkForm()
-	validateEmail()
-	clearInput()
+	checkFirstNameError()
+	checkLastNameError()
+	checkEmailError()
+	checkPasswordError()
+	clearInputs()
 })
